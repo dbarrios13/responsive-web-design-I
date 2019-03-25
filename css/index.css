@@ -69,7 +69,7 @@ h1, h2, h3, h4, h5 {
 
 .container {
 	margin: 0 auto;
-	width: 90%;
+	max-width: 90%;
 }
 p {
 	line-height: 1.25;
@@ -251,7 +251,7 @@ footer p {
 
 @media (max-width: 800px) {
     .container {
-        width: 80%;
+        max-width: 80%;
     }
     .img-header {
         display: none;
@@ -276,3 +276,36 @@ footer p {
     }
 }
 
+@media (max-width: 500px) {
+    .container {
+        max-width: 100%;
+    }
+    header nav {
+        width: 100%;
+        flex-direction: column;
+    }
+    header nav a {
+        text-align: center;
+        border-top: 1px solid lightgrey;
+    }
+    header nav a:first-child{
+        padding-left: 20px;
+    }
+    header nav a:last-child {
+        border-bottom: 1px solid lightgrey;
+        padding-right: 20px;
+    }
+    .top-features, .bottom-features {
+        flex-direction: column;
+    }    
+    .main-content, .contact{
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    .top-features, .bottom-features div {
+        padding: 20px 0;
+    }
+    .contact{
+        padding: 20px 0;
+    }
+}

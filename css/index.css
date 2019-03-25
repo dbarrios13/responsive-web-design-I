@@ -67,9 +67,9 @@ h1, h2, h3, h4, h5 {
 
 /****** Universal ********/
 
-body{
+.container {
 	margin: 0 auto;
-	width: 900px;
+	width: 90%;
 }
 p {
 	line-height: 1.25;
@@ -85,19 +85,32 @@ header {
     margin-top: 20px;
 }
 
-header nav, header a{
+header nav{
 	display: flex;
+	align-content: center;
+}
+
+.logo {
+	padding-top: 5px;
 }
 
 header nav a{
-	color: black;
+	color: lightgray;
 	text-decoration: none;
 	padding: 20px;
 }
 
 header nav a:hover{
-	color: lightgray;
+	color: black;
 	background: white;
+}
+
+header nav a:first-child{
+    padding-left: 0;
+}
+
+header nav a:last-child{
+    padding-right: 0;
 }
 
 footer p {
@@ -154,8 +167,11 @@ footer p {
 	margin: 20px 0;
 }
 
+.top-features div {
+    padding: 5px;
+}
+
 .middle-img{
-	margin: 10px;
 	width: 100%;
 }
 
@@ -229,5 +245,34 @@ footer p {
 	list-style-type: square;
 	padding-left: 20px;
 	line-height: 1.5; 
+}
+
+/* Tablet max width */
+
+@media (max-width: 800px) {
+    .container {
+        width: 80%;
+    }
+    .img-header {
+        display: none;
+    }
+    header {
+        flex-direction: column-reverse;
+        align-items: center;
+        height: 100%; 
+    }
+    header nav {
+        margin-top: 10px;
+        justify-content: space-evenly;
+        font-size: 13px;
+    }
+    .main-header {
+        margin-top: 0;
+    }
+    .main-header button:hover{
+        border: 1px solid black;
+        font-size: 20px;
+        padding: 5px 25px; 
+    }
 }
 
